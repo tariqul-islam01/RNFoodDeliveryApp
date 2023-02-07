@@ -1,9 +1,7 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
-import Header from '../../components/Header';
-import {colors, parameters, title} from '../../global/styles';
-import * as Animatable from 'react-native-animatable';
-import {Button, Icon, SocialIcon} from 'react-native-elements';
+import {colors, parameters} from '../../global/styles';
+import {Button} from 'react-native-elements';
 import Swiper from 'react-native-swiper';
 
 export default function SignInWelcomeScreen(): JSX.Element {
@@ -57,6 +55,22 @@ export default function SignInWelcomeScreen(): JSX.Element {
             />
           </View>
         </Swiper>
+      </View>
+      <View style={{flex: 4, justifyContent: 'flex-end', marginBottom: 20}}>
+        <View style={{marginHorizontal: 20, marginTop: 30}}>
+          <Button
+            title={'Sign in'}
+            buttonStyle={parameters.styledButton}
+            titleStyle={parameters.buttonTitle}
+          />
+        </View>
+        <View style={{marginHorizontal: 20, marginTop: 20}}>
+          <Button
+            title={'Create an account'}
+            buttonStyle={styles.createButton}
+            titleStyle={styles.createButtonTitle}
+          />
+        </View>
       </View>
     </View>
   );
