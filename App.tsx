@@ -1,22 +1,18 @@
 import React from 'react';
-import {View, Text, StyleSheet, StatusBar, SafeAreaView} from 'react-native';
-import SignInScreen from './src/screens/authScreens/SignInScreen';
+import {View, StyleSheet, StatusBar} from 'react-native';
 import {colors} from './src/global/styles';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import SignInWelcomeScreen from './src/screens/authScreens/SignInWelcomeScreen';
+import RootNavigator from './src/navigation/RootNavigator';
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <View style={styles.container}>
-        <StatusBar
-          barStyle={'light-content'}
-          backgroundColor={colors.statusbar}
-        />
-        {/* <SignInScreen /> */}
-        <SignInWelcomeScreen />
-      </View>
-    </SafeAreaProvider>
+    <View style={styles.container}>
+      <StatusBar
+        barStyle={'light-content'}
+        backgroundColor={colors.statusbar}
+      />
+      <RootNavigator />
+    </View>
   );
 }
 
